@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grégoire NAKACHDJIAN - Conseiller Numérique, Marketing & IA Générative à Limas</title>
+    <!-- Chargement de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuration de Tailwind pour la police Inter et le style -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1e3a8a', // Dark Blue
+                        'secondary-cyan': '#06b6d4', // Cyan
+                        'accent-yellow': '#facc15', // Yellow Accent
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Styles personnalisés pour le jeu de couleurs et les effets d'ombre */
+        .shadow-custom {
+            box-shadow: 0 10px 15px -3px rgba(30, 58, 138, 0.1), 0 4px 6px -2px rgba(30, 58, 138, 0.05);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(30, 58, 138, 0.2), 0 8px 10px -6px rgba(30, 58, 138, 0.1);
+        }
+        /* Style pour l'arrière-plan de la section Hero */
+        #hero-section {
+            background-color: #1e3a8a; /* primary-blue */
+            background-image: linear-gradient(135deg, #1e3a8a 0%, #0c4a6e 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- En-tête de navigation -->
+    <header class="sticky top-0 bg-white shadow-lg z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold text-primary-blue">
+                G. NAKACHDJIAN
+            </div>
+            <div class="space-x-4 hidden md:block">
+                <a href="#expertise" class="text-gray-600 hover:text-secondary-cyan transition duration-300">Expertise</a>
+                <a href="#services" class="text-gray-600 hover:text-secondary-cyan transition duration-300">Services</a>
+                <a href="#parcours" class="text-gray-600 hover:text-secondary-cyan transition duration-300">Parcours</a>
+                <a href="#contact" class="text-white bg-secondary-cyan hover:bg-opacity-90 px-4 py-2 rounded-full font-semibold transition duration-300 shadow-md">Contact</a>
+            </div>
+            <!-- Bouton Menu Mobile (Non implémenté pour un one-pager simple, mais bonne pratique) -->
+            <button class="md:hidden text-gray-800 hover:text-primary-blue focus:outline-none">
+                <!-- Icone de menu Lucide: menu -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section HERO - Bannière principale -->
+        <section id="hero-section" class="pt-20 pb-24 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-7/12 text-center md:text-left mb-10 md:mb-0">
+                    <span class="text-secondary-cyan font-semibold text-lg uppercase tracking-wider mb-2 block">Limas (69400) & Région Lyonnaise</span>
+                    <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                        Grégoire NAKACHDJIAN
+                    </h1>
+                    <h2 class="text-3xl lg:text-4xl font-light text-accent-yellow mb-8">
+                        Conseiller Numérique, Marketing & IA Générative
+                    </h2>
+                    <p class="text-xl opacity-90 mb-8 max-w-xl mx-auto md:mx-0">
+                        Transformez votre communication et votre stratégie de contenu grâce à 20 ans d'expérience en médias et l'intégration des outils d'Intelligence Artificielle de pointe.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center bg-accent-yellow text-primary-blue font-bold text-lg py-3 px-8 rounded-full shadow-lg hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                        Débuter votre transformation IA
+                    </a>
+                </div>
+                <div class="md:w-5/12 flex justify-center">
+                    <!-- Image de Grégoire (ou un avatar/icône pro si la photo CV n'est pas utilisée) -->
+                    <div class="w-64 h-64 bg-gray-200 rounded-full overflow-hidden border-4 border-accent-yellow flex items-center justify-center">
+                        <svg class="w-3/4 h-3/4 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                        <!-- NOTE: Remplacer par une photo professionnelle de Grégoire si possible -->
+                        <img src="https://placehold.co/256x256/1e3a8a/facc15?text=Gr%C3%A9goire" alt="[Image de Grégoire Nakachdjian, Consultant Professionnel]" onerror="this.onerror=null;this.src='https://placehold.co/256x256/1e3a8a/facc15?text=Gr%C3%A9goire';" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Expertise (basée sur le CV) -->
+        <section id="expertise" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-4xl font-extrabold text-center text-primary-blue mb-12">
+                    Une Expertise Unique : Médias, Pédagogie et Technologie
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Carte 1: IA Générative et Contenu -->
+                    <div class="bg-white p-8 rounded-xl shadow-custom card-hover transition duration-300 border-t-4 border-secondary-cyan">
+                        <div class="text-4xl text-secondary-cyan mb-4">
+                            <!-- Icone Lucide: Brain -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a2 2 0 0 1 2 2v2a2 2 0 0 1-4 0V3a2 2 0 0 1 2-2zM4 6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-4 0V6a2 2 0 0 1-2-2zM4 14a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4a2 2 0 0 1-4 0v-2a2 2 0 0 1-4 0v2a2 2 0 0 1-2-2zM16 4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-4 0V4a2 2 0 0 1-2-2zM18 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/></svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-3 text-primary-blue">Stratégie IA & Productivité</h4>
+                        <p class="text-gray-600">Intégration et formation aux outils d'IA générative (texte, image, voix) pour optimiser la création de contenu, les campagnes marketing et la productivité interne.</p>
+                    </div>
+
+                    <!-- Carte 2: Marketing & Médias (Journalisme, Rédaction, CM) -->
+                    <div class="bg-white p-8 rounded-xl shadow-custom card-hover transition duration-300 border-t-4 border-primary-blue">
+                        <div class="text-4xl text-primary-blue mb-4">
+                            <!-- Icone Lucide: Book Open -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-3 text-primary-blue">Contenu & Rédaction Experte</h4>
+                        <p class="text-gray-600">Plus de 15 ans d'expérience en journalisme, rédaction (magazine institutionnel, presse spécialisée) et gestion de communauté. Maîtrise des messages clairs et impactants.</p>
+                    </div>
+
+                    <!-- Carte 3: Pédagogie Numérique & Webmastering -->
+                    <div class="bg-white p-8 rounded-xl shadow-custom card-hover transition duration-300 border-t-4 border-secondary-cyan">
+                        <div class="text-4xl text-secondary-cyan mb-4">
+                            <!-- Icone Lucide: Monitor -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-3 text-primary-blue">Formation & Webmastering</h4>
+                        <p class="text-gray-600">Formateur académique (IAN-EMI), webmaster de site (Wordpress, Joomla, Spip) et expert en éducation aux médias. Je transfère les compétences techniques et méthodologiques à vos équipes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Services Détaillés -->
+        <section id="services" class="py-16 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-4xl font-extrabold text-center text-primary-blue mb-12">
+                    Mes Prestations pour votre Développement Numérique
+                </h3>
+
+                <div class="space-y-12">
+                    <!-- Service 1: Audit & Stratégie IA -->
+                    <div class="flex flex-col lg:flex-row items-start lg:space-x-8 bg-white p-6 md:p-10 rounded-xl shadow-custom border-l-8 border-accent-yellow">
+                        <div class="flex-shrink-0 mb-4 lg:mb-0 text-5xl text-accent-yellow">
+                            <!-- Icone Lucide: Search Check -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/><path d="m21 21-4.35-4.35"/><path d="m14 11-2 2 4 4"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-bold text-primary-blue mb-2">Audit de Contenu et Stratégie IA</h4>
+                            <p class="text-lg text-gray-600 mb-4">
+                                Analyse de votre écosystème de communication actuel et proposition d'une stratégie d'intégration de l'IA générative pour automatiser la production de contenu, le community management et la recherche d'information.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-500 space-y-1 ml-4">
+                                <li>Identification des tâches à haute valeur ajoutée pour l'IA.</li>
+                                <li>Mise en place de 'Prompts' efficaces et personnalisés.</li>
+                                <li>Optimisation du cycle de vie du contenu (idée à publication).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Refonte de Site Web et SEO -->
+                    <div class="flex flex-col lg:flex-row items-start lg:space-x-8 bg-white p-6 md:p-10 rounded-xl shadow-custom border-l-8 border-secondary-cyan">
+                        <div class="flex-shrink-0 mb-4 lg:mb-0 text-5xl text-secondary-cyan">
+                            <!-- Icone Lucide: Code -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-bold text-primary-blue mb-2">Création et Optimisation de Sites Web (Wordpress, Joomla, Spip)</h4>
+                            <p class="text-lg text-gray-600 mb-4">
+                                Utilisation de votre maîtrise des outils de webmastering pour assurer une présence en ligne professionnelle, sécurisée et performante. Je mets l'accent sur l'accessibilité et le référencement.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-500 space-y-1 ml-4">
+                                <li>Migration et maintenance technique de CMS.</li>
+                                <li>Stratégie SEO basée sur l'intention de recherche.</li>
+                                <li>Design responsive et convivialité utilisateur.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                     <!-- Service 3: Formation sur Mesure -->
+                    <div class="flex flex-col lg:flex-row items-start lg:space-x-8 bg-white p-6 md:p-10 rounded-xl shadow-custom border-l-8 border-accent-yellow">
+                        <div class="flex-shrink-0 mb-4 lg:mb-0 text-5xl text-accent-yellow">
+                            <!-- Icone Lucide: Users -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-bold text-primary-blue mb-2">Transfert de Compétences et Formation d'Équipe</h4>
+                            <p class="text-lg text-gray-600 mb-4">
+                                Fort de mon expérience de formateur académique, je conçois et délivre des ateliers pratiques pour monter en compétence vos collaborateurs sur les outils numériques, les bonnes pratiques rédactionnelles et l'usage éthique de l'IA.
+                            </p>
+                            <ul class="list-disc list-inside text-gray-500 space-y-1 ml-4">
+                                <li>Ateliers sur la Suite ADOBE et la production graphique (Canva).</li>
+                                <li>Sensibilisation aux médias et à la désinformation.</li>
+                                <li>Formation à la prise de parole en public et à la gestion de crise.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 4: Démarrage Rapide IA - Générateur d'Idées de Contenu (GEMINI API) -->
+                    <div class="flex flex-col lg:flex-row items-start lg:space-x-8 bg-white p-6 md:p-10 rounded-xl shadow-custom border-l-8 border-primary-blue">
+                        <div class="flex-shrink-0 mb-4 lg:mb-0 text-5xl text-primary-blue">
+                            <!-- Icone Lucide: Sparkles -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.9 21.37a6.23 6.23 0 0 1-5.12-4.14c-.65-2.52 1.3-5.32 3.82-5.97 2.53-.65 5.33 1.3 5.98 3.82.64 2.52-1.3 5.32-3.83 5.97z"/><path d="M12.98 5.64a.97.97 0 0 0-1.55-.95l-1.92 1.93-1.93-1.93a.97.97 0 0 0-1.55.95l1.45 2.14-1.45 2.14a.97.97 0 0 0 1.55.95l1.93-1.93 1.92 1.93a.97.97 0 0 0 1.55-.95l-1.45-2.14 1.45-2.14z"/></svg>
+                        </div>
+                        <div class="w-full">
+                            <h4 class="text-3xl font-bold text-primary-blue mb-2">✨ Générateur d'Idées de Contenu IA (Démo)</h4>
+                            <p class="text-lg text-gray-600 mb-4">
+                                Testez la puissance de l'IA générative. Entrez un sujet pour votre entreprise et recevez immédiatement 3 idées de titres accrocheurs pour votre prochain article ou publication sociale, optimisés par Gemini.
+                            </p>
+                            <div class="space-y-3 mt-4 p-4 border rounded-lg bg-gray-50">
+                                <input type="text" id="ia-topic-input" placeholder="Ex: Marketing local pour fleuristes / L'importance du télétravail" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-cyan focus:border-secondary-cyan transition duration-200">
+                                <button id="ia-generate-button" class="w-full bg-secondary-cyan text-white font-bold py-3 rounded-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-[1.005] shadow-md flex items-center justify-center">
+                                    Générer 3 Idées de Contenu ✨
+                                </button>
+                                <div id="ia-loading-spinner" class="hidden text-center text-primary-blue font-semibold p-2">
+                                    Génération en cours... Merci de patienter.
+                                </div>
+                                <div id="ia-results-output" class="mt-4 p-4 bg-white border border-secondary-cyan rounded-lg text-left text-gray-800 hidden">
+                                    <!-- Results will be displayed here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Parcours (CV synthétisé) -->
+        <section id="parcours" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-4xl font-extrabold text-center text-primary-blue mb-12">
+                    Mon Parcours : De la Presse à la Transformation Numérique
+                </h3>
+                
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Ligne verticale de la timeline -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-300 hidden sm:block"></div>
+
+                    <!-- Étape 1: Éducation Numérique (Depuis 2019) -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12 hidden sm:block"></div>
+                        <div class="z-10 flex items-center order-1 bg-primary-blue shadow-lg w-8 h-8 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">I</h1>
+                        </div>
+                        <div class="order-1 sm:w-5/12 p-6 rounded-xl bg-gray-100 shadow-lg sm:ml-6 ml-0 w-full sm:mt-0 mt-4">
+                            <p class="text-secondary-cyan font-bold text-lg mb-1">Depuis 2019</p>
+                            <h4 class="mb-3 font-semibold text-xl text-primary-blue">Formateur IAN-EMI & Webmaster</h4>
+                            <p class="text-sm leading-snug text-gray-600">
+                                Professeur documentaliste, Formateur académique (IAN-EMI), Webmaster d'établissements. **Mission : Transfert de compétences et éducation aux médias et à l'information (EMI).**
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Étape 2: Communication & Événementiel (2015-2019) -->
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12 hidden sm:block"></div>
+                        <div class="z-10 flex items-center order-1 bg-primary-blue shadow-lg w-8 h-8 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">II</h1>
+                        </div>
+                        <div class="order-1 sm:w-5/12 p-6 rounded-xl bg-gray-100 shadow-lg sm:mr-6 mr-0 w-full sm:mt-0 mt-4">
+                            <p class="text-secondary-cyan font-bold text-lg mb-1">2015-2019</p>
+                            <h4 class="mb-3 font-semibold text-xl text-primary-blue">Responsable Communication & CM</h4>
+                            <p class="text-sm leading-snug text-gray-600">
+                                Somapresse & Conseil Départemental de Mayotte. **Mission : Création de magazines institutionnels, organisation d'événements, gestion des réseaux sociaux (Community Management).**
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Étape 3: Journalisme & Relations Presse (2008-2015) -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12 hidden sm:block"></div>
+                        <div class="z-10 flex items-center order-1 bg-primary-blue shadow-lg w-8 h-8 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">III</h1>
+                        </div>
+                        <div class="order-1 sm:w-5/12 p-6 rounded-xl bg-gray-100 shadow-lg sm:ml-6 ml-0 w-full sm:mt-0 mt-4">
+                            <p class="text-secondary-cyan font-bold text-lg mb-1">2008-2015</p>
+                            <h4 class="mb-3 font-semibold text-xl text-primary-blue">Journaliste & Attaché de Presse (Lyon)</h4>
+                            <p class="text-sm leading-snug text-gray-600">
+                                Journaliste spécialisé (automobile, national) et attaché de presse pour une agence de Relations presse et publiques lyonnaise. **Mission : Rédaction, relations médias, stratégie de visibilité.**
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact" class="inline-flex items-center bg-primary-blue text-white font-bold text-lg py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-105">
+                        Mon Profil Complet sur LinkedIn
+                        <!-- Icone Lucide: Linkedin -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Call to Action / Contact -->
+        <section id="contact" class="py-16 bg-primary-blue text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-4xl font-extrabold text-accent-yellow mb-4">
+                    Prêt à propulser votre Marketing et votre IA ?
+                </h3>
+                <p class="text-xl mb-8 opacity-90">
+                    Basé à Limas (69400), j'interviens dans la région du Beaujolais, Villefranche-sur-Saône et Grand Lyon. Contactez-moi pour un échange gratuit.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                    <div class="flex items-center justify-center space-x-3 text-lg">
+                        <!-- Icone Lucide: Mail -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary-cyan"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        <a href="mailto:g_nak@hotmail.com" class="hover:text-secondary-cyan transition duration-300 font-semibold">g_nak@hotmail.com</a>
+                    </div>
+                    <div class="flex items-center justify-center space-x-3 text-lg">
+                         <!-- Icone Lucide: Phone -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary-cyan"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-4.71-4.71 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 3.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="tel:0639220791" class="hover:text-secondary-cyan transition duration-300 font-semibold">06 39 22 07 91</a>
+                    </div>
+                </div>
+
+                <!-- Formulaire de Contact Simple (MAINTENANT FONCTIONNEL via Formspree) -->
+                <div class="mt-10 bg-white p-6 rounded-xl text-gray-800 shadow-xl">
+                    <!-- ATTENTION : Remplacez VOTRE_ID_FORMSPREE par l'ID réel que vous obtiendrez de Formspree après votre première soumission. -->
+                    <!-- J'ai mis votre email en dur pour la première soumission : -->
+                    <form id="contact-form" action="https://formspree.io/f/f/g_nak@hotmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Nouveau contact via site web G. Nakachdjian" />
+                        <div class="space-y-4">
+                            <div>
+                                <!-- Le champ doit avoir l'attribut 'name' pour l'envoi -->
+                                <input type="text" id="name" name="Nom et Prénom / Entreprise" placeholder="Votre Nom et Prénom / Nom de votre Entreprise" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200">
+                            </div>
+                            <div>
+                                <!-- Utilisation de _replyto pour que vous puissiez répondre directement à l'expéditeur -->
+                                <input type="email" id="email" name="_replyto" placeholder="Votre Adresse Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200">
+                            </div>
+                            <div>
+                                <textarea id="message" name="Message" rows="4" placeholder="Votre projet (ex: J'ai besoin d'une formation IA pour mon équipe / Je veux refaire mon site Wordpress)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full mt-6 bg-secondary-cyan text-white font-bold py-3 rounded-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-[1.01] shadow-md">
+                            Envoyer votre Demande
+                        </button>
+                        <!-- La gestion du message de succès est maintenant gérée par Formspree, mais je garde le champ JS pour la cohérence -->
+                        <p id="form-message" class="mt-4 text-sm text-center text-green-600 hidden">
+                            Votre message a été envoyé ! Je vous recontacterai rapidement.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 Grégoire NAKACHDJIAN - Conseiller Numérique & IA. Basé à Limas (69400).</p>
+            <p class="mt-2 text-gray-400">Site créé pour la présentation professionnelle.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript pour la gestion du formulaire (simulation) et l'IA Gemini -->
+    <script>
+        // Fonction pour la logique de réessai avec backoff exponentiel pour l'API Fetch
+        async function fetchWithRetry(url, options, maxRetries = 5) {
+            let lastError = null;
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response;
+                } catch (error) {
+                    lastError = error;
+                    // Délai d'attente exponentiel + jitter
+                    const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                    console.warn(`Request failed, retrying in ${delay / 1000}s...`);
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+            console.error("Max retries reached. Last error:", lastError);
+            throw lastError;
+        }
+
+        // Variables globales pour l'API Key et l'URL (selon les instructions)
+        const apiKey = ""; 
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+        // Fonction principale pour appeler l'IA Gemini et générer des idées de contenu
+        async function generateContentIdeas() {
+            const topicInput = document.getElementById('ia-topic-input');
+            const generateButton = document.getElementById('ia-generate-button');
+            const loadingSpinner = document.getElementById('ia-loading-spinner');
+            const resultsOutput = document.getElementById('ia-results-output');
+
+            const userTopic = topicInput.value.trim();
+
+            if (!userTopic) {
+                resultsOutput.innerHTML = '<p class="text-red-600">Veuillez entrer un sujet pour générer des idées.</p>';
+                resultsOutput.classList.remove('hidden');
+                return;
+            }
+
+            // Désactiver le bouton et montrer le spinner
+            generateButton.disabled = true;
+            generateButton.classList.add('opacity-50', 'cursor-not-allowed');
+            loadingSpinner.classList.remove('hidden');
+            resultsOutput.classList.add('hidden');
+            resultsOutput.innerHTML = '';
+
+            const systemPrompt = "Vous êtes un expert en marketing digital et en IA générative. Votre tâche est de prendre un sujet donné et de générer une liste de 3 titres de contenu percutants, optimisés pour l'engagement sur les réseaux sociaux et le SEO. Répondez uniquement avec les 3 titres sous forme de liste numérotée, sans introduction ni conclusion.";
+            const userQuery = `Génère 3 titres d'articles ou de posts sociaux accrocheurs pour le sujet suivant : "${userTopic}"`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+                config: {
+                    maxOutputTokens: 500,
+                }
+            };
+
+            try {
+                const response = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                const generatedText = result.candidates?.[0]?.content?.parts?.[0]?.text || "Erreur : Impossible de générer le contenu. Veuillez réessayer.";
+
+                resultsOutput.innerHTML = `<h5 class="font-bold mb-2 text-primary-blue">Vos 3 Idées de Titres :</h5>${markdownToHtml(generatedText)}`;
+                resultsOutput.classList.remove('hidden');
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                resultsOutput.innerHTML = '<p class="text-red-600">Désolé, une erreur est survenue lors de la connexion à l\'IA. Veuillez vérifier la console.</p>';
+                resultsOutput.classList.remove('hidden');
+            } finally {
+                // Rétablir le bouton et masquer le spinner
+                generateButton.disabled = false;
+                generateButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                loadingSpinner.classList.add('hidden');
+            }
+        }
+
+        // Conversion Markdown simple vers HTML pour une liste (car l'IA retourne une liste markdown)
+        function markdownToHtml(markdown) {
+            // Convertir la liste numérotée (1. 2. 3.) en liste HTML
+            const listItems = markdown.split('\n').filter(line => line.match(/^\d+\./));
+            if (listItems.length > 0) {
+                let html = '<ol class="list-decimal list-inside space-y-1">';
+                listItems.forEach(item => {
+                    // Supprimer le numéro et le point et nettoyer les espaces
+                    const content = item.replace(/^\d+\.\s*/, '').trim();
+                    html += `<li>${content}</li>`;
+                });
+                html += '</ol>';
+                return html;
+            }
+            // Fallback pour le texte simple/messages d'erreur
+            return `<p>${markdown}</p>`;
+        }
+
+        // Événement pour le générateur IA
+        document.getElementById('ia-generate-button').addEventListener('click', generateContentIdeas);
+
+
+        // --- Logique Existante ---
+
+        // Gestion de l'ancre du CV (liens internes pour le one-pager)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Suppression de la simulation JS car Formspree gère l'envoi réel
+        // document.getElementById('contact-form').addEventListener('submit', function(e) {
+        //     e.preventDefault();
+            
+        //     const formMessage = document.getElementById('form-message');
+            
+        //     // Simuler l'envoi réussi
+        //     setTimeout(() => {
+        //         formMessage.textContent = "Merci pour votre message ! Je vous recontacterai très rapidement pour échanger sur votre projet.";
+        //         formMessage.classList.remove('hidden');
+        //         formMessage.classList.add('text-secondary-cyan');
+                
+        //         // Réinitialiser le formulaire après un court délai
+        //         document.getElementById('contact-form').reset();
+        //     }, 500);
+        // });
+        
+        // La soumission du formulaire est maintenant gérée par l'action Formspree
+    </script>
+</body>
+</html>
