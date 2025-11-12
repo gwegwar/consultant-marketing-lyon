@@ -81,13 +81,21 @@
                     </a>
                 </div>
                 <div class="md:w-5/12 flex justify-center">
-                    <!-- Image de Grégoire (ou un avatar/icône pro si la photo CV n'est pas utilisée) -->
+                    <!-- CONTENEUR DE LA PHOTO: C'est ici que vous pouvez insérer votre photo -->
                     <div class="w-64 h-64 bg-gray-200 rounded-full overflow-hidden border-4 border-accent-yellow flex items-center justify-center">
-                        <svg class="w-3/4 h-3/4 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                        </svg>
-                        <!-- NOTE: Remplacer par une photo professionnelle de Grégoire si possible -->
-                        <img src="https://placehold.co/256x256/1e3a8a/facc15?text=Gr%C3%A9goire" alt="[Image de Grégoire Nakachdjian, Consultant Professionnel]" onerror="this.onerror=null;this.src='https://placehold.co/256x256/1e3a8a/facc15?text=Gr%C3%A9goire';" class="w-full h-full object-cover">
+                        
+                        <!-- 
+                            *** INSTRUCTIONS POUR INSÉRER VOTRE PHOTO ***
+                            1.  Remplacez la fausse URL d'image (placehold.co) ci-dessous par l'URL de votre propre photo.
+                            2.  Votre photo doit être carrée ou bien recadrée pour ne pas être étirée dans le cercle.
+                        -->
+                        <img 
+                            src="https://placehold.co/256x256/1e3a8a/facc15?text=Gr%C3%A9goire" 
+                            alt="Photo de Grégoire Nakachdjian, Consultant Professionnel" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/256x256/1e3a8a/facc15?text=Gr%C3%A9goire';" 
+                            class="w-full h-full object-cover"
+                        >
+                        
                     </div>
                 </div>
             </div>
@@ -279,14 +287,15 @@
                             <p class="text-secondary-cyan font-bold text-lg mb-1">2008-2015</p>
                             <h4 class="mb-3 font-semibold text-xl text-primary-blue">Journaliste & Attaché de Presse (Lyon)</h4>
                             <p class="text-sm leading-snug text-gray-600">
-                                Journaliste spécialisé (automobile, national) et attaché de presse pour une agence de Relations presse et publiques lyonnaise. **Mission : Rédaction, relations médias, stratégie de visibilité.**
+                                Journaliste spécialisé dans l'automobile pour un magazine national et attaché de presse pour une agence de Relations presse et publiques lyonnaise. **Mission : Rédaction, relations médias, stratégie de visibilité.**
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="text-center mt-12">
-                    <a href="#contact" class="inline-flex items-center bg-primary-blue text-white font-bold text-lg py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-105">
+                    <!-- LIEN VERS LINKEDIN -->
+                    <a href="https://www.linkedin.com/in/gregoire-nakachdjian/" target="_blank" class="inline-flex items-center bg-primary-blue text-white font-bold text-lg py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-105">
                         Mon Profil Complet sur LinkedIn
                         <!-- Icone Lucide: Linkedin -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
@@ -318,15 +327,14 @@
                     </div>
                 </div>
 
-                <!-- Formulaire de Contact Simple (MAINTENANT FONCTIONNEL via Formspree) -->
+                <!-- Formulaire de Contact Simple (Maintenant géré par JavaScript/Fetch) -->
                 <div class="mt-10 bg-white p-6 rounded-xl text-gray-800 shadow-xl">
-                    <!-- ATTENTION : Remplacez VOTRE_ID_FORMSPREE par l'ID réel que vous obtiendrez de Formspree après votre première soumission. -->
-                    <!-- J'ai mis votre email en dur pour la première soumission : -->
-                    <form id="contact-form" action="https://formspree.io/f/f/g_nak@hotmail.com" method="POST">
+                    <!-- ACTION Formspree conservée pour référence, mais gérée par JS -->
+                    <form id="contact-form" action="https://formspree.io/f/mzbqrqql" method="POST">
+                        <input type="hidden" name="_id" value="g_nak@hotmail.com" />
                         <input type="hidden" name="_subject" value="Nouveau contact via site web G. Nakachdjian" />
                         <div class="space-y-4">
                             <div>
-                                <!-- Le champ doit avoir l'attribut 'name' pour l'envoi -->
                                 <input type="text" id="name" name="Nom et Prénom / Entreprise" placeholder="Votre Nom et Prénom / Nom de votre Entreprise" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200">
                             </div>
                             <div>
@@ -337,167 +345,207 @@
                                 <textarea id="message" name="Message" rows="4" placeholder="Votre projet (ex: J'ai besoin d'une formation IA pour mon équipe / Je veux refaire mon site Wordpress)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200"></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="w-full mt-6 bg-secondary-cyan text-white font-bold py-3 rounded-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-[1.01] shadow-md">
+                        <button type="submit" id="submit-button" class="w-full mt-6 bg-secondary-cyan text-white font-bold py-3 rounded-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-[1.01] shadow-md">
                             Envoyer votre Demande
                         </button>
-                        <!-- La gestion du message de succès est maintenant gérée par Formspree, mais je garde le champ JS pour la cohérence -->
-                        <p id="form-message" class="mt-4 text-sm text-center text-green-600 hidden">
-                            Votre message a été envoyé ! Je vous recontacterai rapidement.
+                        <!-- Le message de statut est maintenant géré par JS -->
+                        <p id="form-status" class="mt-4 text-sm text-center font-semibold" style="min-height: 1.5rem;">
                         </p>
                     </form>
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Pied de page -->
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <p>&copy; 2025 Grégoire NAKACHDJIAN - Conseiller Numérique & IA. Basé à Limas (69400).</p>
-            <p class="mt-2 text-gray-400">Site créé pour la présentation professionnelle.</p>
-        </div>
-    </footer>
+        <!-- Pied de page -->
+        <footer class="bg-gray-800 text-white py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+                <p>&copy; 2025 Grégoire NAKACHDJIAN - Conseiller Numérique & IA. Basé à Limas (69400).</p>
+                <p class="mt-2 text-gray-400">Site créé pour la présentation professionnelle.</p>
+            </div>
+        </footer>
 
-    <!-- JavaScript pour la gestion du formulaire (simulation) et l'IA Gemini -->
-    <script>
-        // Fonction pour la logique de réessai avec backoff exponentiel pour l'API Fetch
-        async function fetchWithRetry(url, options, maxRetries = 5) {
-            let lastError = null;
-            for (let i = 0; i < maxRetries; i++) {
-                try {
-                    const response = await fetch(url, options);
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
+        <!-- JavaScript pour la gestion de l'IA Gemini et du Formulaire -->
+        <script>
+            // Fonction pour la logique de réessai avec backoff exponentiel pour l'API Fetch
+            async function fetchWithRetry(url, options, maxRetries = 5) {
+                let lastError = null;
+                for (let i = 0; i < maxRetries; i++) {
+                    try {
+                        const response = await fetch(url, options);
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response;
+                    } catch (error) {
+                        lastError = error;
+                        // Délai d'attente exponentiel + jitter
+                        const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                        console.warn(`Request failed, retrying in ${delay / 1000}s...`);
+                        await new Promise(resolve => setTimeout(resolve, delay));
                     }
-                    return response;
+                }
+                console.error("Max retries reached. Last error:", lastError);
+                throw lastError;
+            }
+
+            // =========================================================================
+            // 1. Logique du Formulaire de Contact (Géré par JavaScript pour l'iframe)
+            // =========================================================================
+            document.getElementById('contact-form').addEventListener('submit', async function(e) {
+                e.preventDefault(); // Empêche la soumission classique du formulaire
+
+                const form = e.target;
+                const submitButton = document.getElementById('submit-button');
+                const formStatus = document.getElementById('form-status');
+                const formUrl = form.action;
+                
+                // Mettre le formulaire en état de chargement
+                submitButton.disabled = true;
+                submitButton.textContent = 'Envoi en cours...';
+                submitButton.classList.add('bg-opacity-70');
+                formStatus.textContent = '';
+                formStatus.classList.remove('text-green-600', 'text-red-600');
+
+                // Récupérer les données du formulaire
+                const formData = new FormData(form);
+
+                try {
+                    // Utiliser l'API Fetch pour envoyer les données à Formspree
+                    const response = await fetchWithRetry(formUrl, {
+                        method: 'POST',
+                        body: formData,
+                        // Formspree exige que vous n'ayez pas de Content-Type si vous utilisez FormData
+                        // headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        // Succès
+                        formStatus.textContent = '✅ Votre message a été envoyé avec succès ! Je vous recontacterai rapidement.';
+                        formStatus.classList.add('text-green-600');
+                        form.reset(); // Vider le formulaire
+                    } else {
+                        // Échec (même si l'API répond 200, Formspree peut renvoyer une erreur 4xx si mal configuré)
+                        const data = await response.json();
+                        if (data.error) {
+                            throw new Error(data.error);
+                        }
+                        throw new Error('Erreur de soumission du formulaire.');
+                    }
                 } catch (error) {
-                    lastError = error;
-                    // Délai d'attente exponentiel + jitter
-                    const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
-                    console.warn(`Request failed, retrying in ${delay / 1000}s...`);
-                    await new Promise(resolve => setTimeout(resolve, delay));
+                    console.error("Form Submission Error:", error);
+                    formStatus.textContent = '❌ Erreur: Impossible d\'envoyer le message. Veuillez réessayer ou utiliser l\'e-mail ci-dessus.';
+                    formStatus.classList.add('text-red-600');
+                } finally {
+                    // Rétablir le bouton
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Envoyer votre Demande';
+                    submitButton.classList.remove('bg-opacity-70');
+                }
+            });
+
+
+            // =========================================================================
+            // 2. Logique du Générateur d'Idées IA (Gemini API)
+            // =========================================================================
+
+            const apiKey = ""; 
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+            // Fonction principale pour appeler l'IA Gemini et générer des idées de contenu
+            async function generateContentIdeas() {
+                const topicInput = document.getElementById('ia-topic-input');
+                const generateButton = document.getElementById('ia-generate-button');
+                const loadingSpinner = document.getElementById('ia-loading-spinner');
+                const resultsOutput = document.getElementById('ia-results-output');
+
+                const userTopic = topicInput.value.trim();
+
+                if (!userTopic) {
+                    resultsOutput.innerHTML = '<p class="text-red-600">Veuillez entrer un sujet pour générer des idées.</p>';
+                    resultsOutput.classList.remove('hidden');
+                    return;
+                }
+
+                // Désactiver le bouton et montrer le spinner
+                generateButton.disabled = true;
+                generateButton.classList.add('opacity-50', 'cursor-not-allowed');
+                loadingSpinner.classList.remove('hidden');
+                resultsOutput.classList.add('hidden');
+                resultsOutput.innerHTML = '';
+
+                const systemPrompt = "Vous êtes un expert en marketing digital et en IA générative. Votre tâche est de prendre un sujet donné et de générer une liste de 3 titres de contenu percutants, optimisés pour l'engagement sur les réseaux sociaux et le SEO. Répondez uniquement avec les 3 titres sous forme de liste numérotée, sans introduction ni conclusion.";
+                const userQuery = `Génère 3 titres d'articles ou de posts sociaux accrocheurs pour le sujet suivant : "${userTopic}"`;
+
+                const payload = {
+                    contents: [{ parts: [{ text: userQuery }] }],
+                    systemInstruction: {
+                        parts: [{ text: systemPrompt }]
+                    },
+                    config: {
+                        maxOutputTokens: 500,
+                    }
+                };
+
+                try {
+                    const response = await fetchWithRetry(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const result = await response.json();
+                    const generatedText = result.candidates?.[0]?.content?.parts?.[0]?.text || "Erreur : Impossible de générer le contenu. Veuillez réessayer.";
+
+                    resultsOutput.innerHTML = `<h5 class="font-bold mb-2 text-primary-blue">Vos 3 Idées de Titres :</h5>${markdownToHtml(generatedText)}`;
+                    resultsOutput.classList.remove('hidden');
+
+                } catch (error) {
+                    console.error("Gemini API Error:", error);
+                    resultsOutput.innerHTML = '<p class="text-red-600">Désolé, une erreur est survenue lors de la connexion à l\'IA. Veuillez vérifier la console.</p>';
+                    resultsOutput.classList.remove('hidden');
+                } finally {
+                    // Rétablir le bouton et masquer le spinner
+                    generateButton.disabled = false;
+                    generateButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                    loadingSpinner.classList.add('hidden');
                 }
             }
-            console.error("Max retries reached. Last error:", lastError);
-            throw lastError;
-        }
 
-        // Variables globales pour l'API Key et l'URL (selon les instructions)
-        const apiKey = ""; 
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-
-        // Fonction principale pour appeler l'IA Gemini et générer des idées de contenu
-        async function generateContentIdeas() {
-            const topicInput = document.getElementById('ia-topic-input');
-            const generateButton = document.getElementById('ia-generate-button');
-            const loadingSpinner = document.getElementById('ia-loading-spinner');
-            const resultsOutput = document.getElementById('ia-results-output');
-
-            const userTopic = topicInput.value.trim();
-
-            if (!userTopic) {
-                resultsOutput.innerHTML = '<p class="text-red-600">Veuillez entrer un sujet pour générer des idées.</p>';
-                resultsOutput.classList.remove('hidden');
-                return;
-            }
-
-            // Désactiver le bouton et montrer le spinner
-            generateButton.disabled = true;
-            generateButton.classList.add('opacity-50', 'cursor-not-allowed');
-            loadingSpinner.classList.remove('hidden');
-            resultsOutput.classList.add('hidden');
-            resultsOutput.innerHTML = '';
-
-            const systemPrompt = "Vous êtes un expert en marketing digital et en IA générative. Votre tâche est de prendre un sujet donné et de générer une liste de 3 titres de contenu percutants, optimisés pour l'engagement sur les réseaux sociaux et le SEO. Répondez uniquement avec les 3 titres sous forme de liste numérotée, sans introduction ni conclusion.";
-            const userQuery = `Génère 3 titres d'articles ou de posts sociaux accrocheurs pour le sujet suivant : "${userTopic}"`;
-
-            const payload = {
-                contents: [{ parts: [{ text: userQuery }] }],
-                systemInstruction: {
-                    parts: [{ text: systemPrompt }]
-                },
-                config: {
-                    maxOutputTokens: 500,
+            // Conversion Markdown simple vers HTML pour une liste (car l'IA retourne une liste markdown)
+            function markdownToHtml(markdown) {
+                // Convertir la liste numérotée (1. 2. 3.) en liste HTML
+                const listItems = markdown.split('\n').filter(line => line.match(/^\d+\./));
+                if (listItems.length > 0) {
+                    let html = '<ol class="list-decimal list-inside space-y-1">';
+                    listItems.forEach(item => {
+                        // Supprimer le numéro et le point et nettoyer les espaces
+                        const content = item.replace(/^\d+\.\s*/, '').trim();
+                        html += `<li>${content}</li>`;
+                    });
+                    html += '</ol>';
+                    return html;
                 }
-            };
-
-            try {
-                const response = await fetchWithRetry(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                const result = await response.json();
-                const generatedText = result.candidates?.[0]?.content?.parts?.[0]?.text || "Erreur : Impossible de générer le contenu. Veuillez réessayer.";
-
-                resultsOutput.innerHTML = `<h5 class="font-bold mb-2 text-primary-blue">Vos 3 Idées de Titres :</h5>${markdownToHtml(generatedText)}`;
-                resultsOutput.classList.remove('hidden');
-
-            } catch (error) {
-                console.error("Gemini API Error:", error);
-                resultsOutput.innerHTML = '<p class="text-red-600">Désolé, une erreur est survenue lors de la connexion à l\'IA. Veuillez vérifier la console.</p>';
-                resultsOutput.classList.remove('hidden');
-            } finally {
-                // Rétablir le bouton et masquer le spinner
-                generateButton.disabled = false;
-                generateButton.classList.remove('opacity-50', 'cursor-not-allowed');
-                loadingSpinner.classList.add('hidden');
+                // Fallback pour le texte simple/messages d'erreur
+                return `<p>${markdown}</p>`;
             }
-        }
 
-        // Conversion Markdown simple vers HTML pour une liste (car l'IA retourne une liste markdown)
-        function markdownToHtml(markdown) {
-            // Convertir la liste numérotée (1. 2. 3.) en liste HTML
-            const listItems = markdown.split('\n').filter(line => line.match(/^\d+\./));
-            if (listItems.length > 0) {
-                let html = '<ol class="list-decimal list-inside space-y-1">';
-                listItems.forEach(item => {
-                    // Supprimer le numéro et le point et nettoyer les espaces
-                    const content = item.replace(/^\d+\.\s*/, '').trim();
-                    html += `<li>${content}</li>`;
-                });
-                html += '</ol>';
-                return html;
-            }
-            // Fallback pour le texte simple/messages d'erreur
-            return `<p>${markdown}</p>`;
-        }
-
-        // Événement pour le générateur IA
-        document.getElementById('ia-generate-button').addEventListener('click', generateContentIdeas);
+            // Événement pour le générateur IA
+            document.getElementById('ia-generate-button').addEventListener('click', generateContentIdeas);
 
 
-        // --- Logique Existante ---
+            // =========================================================================
+            // 3. Logique de navigation interne (Scroll fluides)
+            // =========================================================================
 
-        // Gestion de l'ancre du CV (liens internes pour le one-pager)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
-        });
-
-        // Suppression de la simulation JS car Formspree gère l'envoi réel
-        // document.getElementById('contact-form').addEventListener('submit', function(e) {
-        //     e.preventDefault();
             
-        //     const formMessage = document.getElementById('form-message');
-            
-        //     // Simuler l'envoi réussi
-        //     setTimeout(() => {
-        //         formMessage.textContent = "Merci pour votre message ! Je vous recontacterai très rapidement pour échanger sur votre projet.";
-        //         formMessage.classList.remove('hidden');
-        //         formMessage.classList.add('text-secondary-cyan');
-                
-        //         // Réinitialiser le formulaire après un court délai
-        //         document.getElementById('contact-form').reset();
-        //     }, 500);
-        // });
-        
-        // La soumission du formulaire est maintenant gérée par l'action Formspree
-    </script>
-</body>
-</html>
+        </script>
+    </body>
+    </html>
